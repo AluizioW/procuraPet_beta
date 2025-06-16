@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -21,7 +21,8 @@ export default function App() {
 
   return (
 
-    <View style={styles.box}>
+    <ScrollView>
+      <View style={styles.box}>
       <View style={styles.container}>
         {data.map(post => (
           <View key={post.id} style={styles.postContainer}>
@@ -37,6 +38,7 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
     </View>
+    </ScrollView>
   );
 }
 
