@@ -20,34 +20,111 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      {data.map(post => (
-        <View key={post.id} style={styles.postContainer}>
-          <Text style={styles.title}>{post.title}</Text>
-          <Text style={styles.description}>{post.description}</Text>
-          <Image 
-            source={{ uri: post.image }} 
-            style={styles.image}
-            resizeMode="contain"
-          />
-        </View>
-      ))}
-      <StatusBar style="auto" />
+
+    <View style={styles.box}>
+      <View style={styles.container}>
+        {data.map(post => (
+          <View key={post.id} style={styles.postContainer}>
+            <Text style={styles.title}>{post.title}</Text>
+            <Text style={styles.description}>{post.description}</Text>
+            <Image 
+              source={{ uri: post.image }} 
+              style={styles.image}
+              resizeMode="contain"
+            />
+          </View>
+        ))}
+        <StatusBar style="auto" />
+      </View>
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
+
+  box: {
+    flex: 1,
+    backgroundColor: '#1b2c5c',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  //   borderRadius: 10,
+  //   shadowColor: '#000',
+  //   shadowOffset: { width: 0, height: 2 },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 3.84,
+  //   elevation: 5,
+  //   margin: 10,
+  //   borderWidth: 1,
+  //   borderColor: '#ddd',
+  //   width: '90%',
+  //   overflow: 'hidden',
+  //   backgroundColor: '#fff',
+  //   borderRadius: 10,
+  //   padding: 20,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   marginVertical: 20,
+  //   marginHorizontal: 10,
+  //   flexDirection: 'column',
+  //   gap: 10,
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    margin: 10,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    width: '90%',
+    overflow: 'hidden',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 20,
+    marginHorizontal: 10,
+    flexDirection: 'column',
+    gap: 10,
+
   },
   postContainer: {
     marginBottom: 20,
     alignItems: 'center',
+
+        borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    margin: 10,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    width: '90%',
+    overflow: 'hidden',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 20,
+    marginHorizontal: 10,
+    flexDirection: 'column',
+    gap: 10,
   },
   title: {
     fontSize: 18,

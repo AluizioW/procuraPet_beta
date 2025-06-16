@@ -31,6 +31,14 @@ app.get('/', (req, res) => {
         title: 'Contato',
         description: 'Entre em contato conosco para mais informações.',
         image: 'https://http.cat/images/102.jpg'
+    },
+
+    {
+        // id: crypto.randomUUID(),
+        id: '4',
+        title: 'Ajuda',
+        description: 'Se você encontrou um pet perdido, entre em contato conosco.',
+        image: 'https://http.cat/images/103.jpg'
     }
   ]);
 });
