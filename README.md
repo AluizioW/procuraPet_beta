@@ -15,6 +15,8 @@ npm add cors
 ```
 ## Rodar
 ```
+cd backend
+
 npm run dev
 ```
 
@@ -34,5 +36,7 @@ npx create-expo-app . --template
 ### Rodar
 
 ```
+cd frontend
+
 npx expo start --clear
 ```
