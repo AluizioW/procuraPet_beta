@@ -40,22 +40,22 @@ export default function App() {
       </View>
     </View>
 
-      <View style={styles.box}>
-      <View style={styles.container}>
-        {data.map(post => (
-          <View key={post.id} style={styles.postContainer}>
-            <Text style={styles.title}>{post.title}</Text>
-            <Text style={styles.description}>{post.description}</Text>
-            <Image 
-              source={{ uri: post.image }} 
-              style={styles.image}
-              resizeMode="contain"
-            />
-          </View>
-        ))}
-        <StatusBar style="auto" />
-      </View>
+    <View style={styles.box}>
+    
+      {data.map(post => (
+        <View key={post.id} style={styles.postContainer}>
+          <Text style={styles.title}>{post.title}</Text>
+          <Text style={styles.description}>{post.description}</Text>
+          <Image 
+            source={{ uri: post.image }} 
+            style={styles.image}
+            resizeMode="contain"
+          />
+        </View>
+      ))}
+      <StatusBar style="auto" />
     </View>
+    
     </ScrollView>
   );
 }
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     alignItems: 'center',
 
-        borderRadius: 10,
+    borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
