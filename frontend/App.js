@@ -20,8 +20,21 @@ export default function App() {
   }, []);
 
   return (
+    
 
     <ScrollView>
+    <View style={styles.header}>
+      <View style={{ flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'red', flex: 1, padding: 10 }}>
+        <Text style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>ProcuraPet</Text>
+        <Text style={{ color: 'white', fontSize: 16 }}>Encontre seu pet perdido</Text>
+      </View>
+
+      <View style={{ display: 'flex',backgroundColor: 'blue', flexDirection: 'column', alignItems: 'flex-end', justifyContent:'center', flex: .5, padding: 10}}>
+        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold'}}>Bem-vindo!</Text>
+        <Text style={{display:'content' ,color: 'white', fontSize: 16}}>Usuário</Text>
+      </View>
+    </View>
+
       <View style={styles.box}>
       <View style={styles.container}>
         {data.map(post => (
@@ -45,6 +58,13 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
+
+  header: {
+    backgroundColor: 'green',
+    padding: 20,
+    display: 'flex',
+    flexDirection: 'row',
+  },
 
   box: {
     flex: 1,
