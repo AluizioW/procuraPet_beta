@@ -24,14 +24,19 @@ export default function App() {
 
     <ScrollView>
     <View style={styles.header}>
-      <View style={{ flexDirection: 'column', alignItems: 'flex-start', backgroundColor: 'red', flex: 1, padding: 10 }}>
-        <Text style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>ProcuraPet</Text>
-        <Text style={{ color: 'white', fontSize: 16 }}>Encontre seu pet perdido</Text>
+      <View style={{ flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', flex: 1, marginLeft: 10 }}>
+        {/* <Text style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>ProcuraPet</Text>
+        <Text style={{ color: 'white', fontSize: 16 }}>Encontre seu pet perdido</Text> */}
+        <Image
+          source={require('./assets/LOGO2.svg')}
+          style={{height: '72px', width:'120px'}}
+          resizeMode="contain"
+        />
       </View>
 
-      <View style={{ display: 'flex',backgroundColor: 'blue', flexDirection: 'column', alignItems: 'flex-end', justifyContent:'center', flex: .5, padding: 10}}>
-        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold'}}>Bem-vindo!</Text>
-        <Text style={{display:'content' ,color: 'white', fontSize: 16}}>Usuário</Text>
+      <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent:'center', flex: .5, padding: 10}}>
+        <Text style={{ color: 'black', fontSize: 18, fontWeight: 'bold'}}>Bem-vindo!</Text>
+        <Text style={{display:'content' ,color: 'black', fontSize: 16}}>Usuário</Text>
       </View>
     </View>
 
@@ -60,8 +65,8 @@ export default function App() {
 const styles = StyleSheet.create({
 
   header: {
-    backgroundColor: 'green',
-    padding: 20,
+    backgroundColor: '#A4CA8B',
+    padding: 10,
     display: 'flex',
     flexDirection: 'row',
   },
