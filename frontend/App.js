@@ -37,6 +37,7 @@ function App() {
           tabBarActiveTintColor: '#66997B',
           tabBarInactiveTintColor: 'gray',
           headerShown: false,
+          tabBarShowLabel: false,
           
           })}
           >
