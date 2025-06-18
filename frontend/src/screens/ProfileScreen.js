@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function NewPostScreen() {
+export default function ProfileScreen() {
   return (
     <View style={styles.container}>
-      <Text>Novo Post</Text>
+      <Text>Meu perfil </Text>
     </View>
   );
 }
