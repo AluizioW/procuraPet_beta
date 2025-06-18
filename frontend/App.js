@@ -2,14 +2,13 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './src/screens/HomeScreen'; 
-import DetailsScreen from './src/screens/DetailsScreen';
+import NewPostScreen from './src/screens/NewPostScreen';
 import NotificationsScreen from './src/screens/NotificationsScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 // import LoginScreen from './src/screens/LoginScreen';
 // import RegisterScreen from './src/screens/RegisterScreen';
 
 import { Ionicons } from '@expo/vector-icons';
-import NewPostScreen from './src/screens/DetailsScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -38,6 +37,14 @@ function App() {
           tabBarInactiveTintColor: 'gray',
           headerShown: false,
           tabBarShowLabel: false,
+
+          tabBarIconStyle: {
+            height: '100%',
+            justifyContent: 'center',
+            margin: '0',
+            padding: '0'
+          }        
+          
           
           })}
           >

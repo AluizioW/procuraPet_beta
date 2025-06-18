@@ -40,7 +40,7 @@ export default function HomeScreen() {
       </View>
     </View>
 
-    <View style={styles.box}>
+    {/* <View style={styles.box}>
     
       {data.map(post => (
         <View key={post.id} style={styles.postContainer}>
@@ -51,6 +51,28 @@ export default function HomeScreen() {
             style={styles.image}
             resizeMode="contain"
           />
+        </View>
+      ))}
+      <StatusBar style="auto" />
+    </View> */}
+
+    <View style={styles.box}>
+    
+      {data.map(post => (
+        <View key={post.id} style={styles.postContainer}>
+          <View >
+            <Image 
+              source={{ uri: post.image }} 
+              style={styles.image}
+              resizeMode="contain"
+              borderRadius={10}
+            />
+          </View>
+          
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{post.status}</Text>
+          </View>
+          <Text style={styles.description}>{post.description}</Text>
         </View>
       ))}
       <StatusBar style="auto" />
@@ -153,6 +175,13 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     gap: 10,
   },
+
+  titleContainer: {
+    marginBottom: 10,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
+
   title: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -163,7 +192,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   image: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
   },
 });
