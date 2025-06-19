@@ -11,6 +11,8 @@ npm init -y
 
 npm add express
 
+npm add nodemon -D
+
 npm add cors
 ```
 ## Rodar
@@ -27,6 +29,10 @@ npm run dev
 mkdir frontend
 
 cd frontend
+
+npm add expo
+
+npx expo install @expo/metro-runtime
 
 npx expo install react-dom react-native-web
 ```
